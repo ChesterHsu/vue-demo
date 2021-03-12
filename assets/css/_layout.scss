@@ -1,0 +1,27 @@
+// 頭部高度
+$header-height: 100px;
+// 頭部背景顏色
+$header-background: #35495e;
+// 底部高度
+$footer-height: 200px;
+// 底部顏色
+$footer-background: red;
+
+
+
+@import "layout/header";
+@import "layout/view";
+@import "layout/footer";
+
+//
+.header{
+  @include header($header-height, $header-background);
+}
+
+.view{
+  @include view($header-height);
+}
+
+.footer{
+  @include footer($footer-height, $footer-background)
+}
