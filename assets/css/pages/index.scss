@@ -5,6 +5,9 @@
   .carousel{
     @include wrap(100%, auto, none){
       margin-bottom: 163px;
+      @include phone() {
+        margin-bottom: 0px;
+      }
     }
   }
   .hot-tags{
@@ -17,11 +20,21 @@
       left: 50%;
       transform: translate(-50%, -140%);
       background: #ffffff;
+      @include phone() {
+        transform: translate(0%, 0%);
+        position: initial;
+        width: 100%;
+      }
       .tags-title{
+        overflow: hidden;
         max-width: 1000px;
         padding-left: 50px;
         padding-right: 50px;
         height: 67px;
+        @include phone() {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
         button{
           font-size: 17px;
           height: 67px;
@@ -30,17 +43,30 @@
           padding: 9px 10px;
           cursor: pointer;
           float: left;
+          @include phone() {
+            font-size: 14px;
+          }
         }
       }
       .tags-body{
+        overflow: hidden;
         max-width: 1000px;
         padding-left: 50px;
         padding-right: 50px;
         height: 100px;
+        @include phone() {
+          padding-left: 0px;
+          padding-right: 0px;
+          height: 60px;
+          font-size: 14px;
+        }
         p{
           margin: 42px 16px 42px 0px;
           float: left;
           color: #8c8c8c;
+          @include phone() {
+            margin: 21px 16px 21px 0px;
+          }
         }
         button{
           height: 37px;
@@ -51,6 +77,104 @@
           color: #428da9;
           font-size: 10px;
           float: left;
+          @include phone() {
+            margin: 15px 16px 15px 0px;
+          }
+        }
+      }
+    }
+  }
+  .evaluation{
+    @include wrap(100%, 610, url("./assets/images/evaluation.png") no-repeat left center) {
+      h3{
+        max-width: 96px;
+        height: 24px;
+        font-size: 24px;
+        margin: 0px auto;
+        padding: 3% 0px 25px 0px;
+      }
+      .comment{
+        max-width: 1170px;
+        height: 540px;
+        margin: 0px auto;
+        .comment-item{
+          width: 48%;
+          height: 200px;
+          margin: 1%;
+          float: left;
+          background: #ffffff;
+          border-radius: 5px;
+          box-shadow:1px 1px 3px gray;
+          @include mini-note-book() {
+            width: 100%;
+          }
+          img{
+            max-width: 100%;
+            height: auto;
+            float: left;
+            margin: 2% 3% 5px;
+          }
+          p{
+            font-size: 13px;
+            color: #8e8e8e;
+            margin: 4% 60% 12px 0px;
+            float: left;
+            @include phone() {
+              margin: 4% 40% 12px 0px;
+            }
+          }
+          .date{
+            font-size: 10px;
+            color: #8e8e8e;
+            float: right;
+            margin: 4% 3% 12px 0px;
+          }
+          h3{
+            height: auto;
+            max-width: 100%;
+            font-size: 15px;
+            color: #595959;
+            margin-left: 2%;
+            margin-right: 2%;
+            padding: 0px;
+            float: left;
+            line-height:20px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
+            margin-bottom: 2%;
+          }
+          .empty-stars {
+            margin: 0px 0px 2% 10px;
+          }
+          .empty-stars::before {
+            content:"\2605\2605\2605\2605\2605";
+            font-size: 14pt;
+            -webkit-text-stroke: 1px #848484;
+          }
+          .course-item{
+            max-width: 500px;
+            width: 100%;
+            height: 50px;
+            margin-left: 10px;
+            background: #fafafa;
+            float: left;
+            @include note-book() {
+              max-width: 400px;
+            }
+            img{
+              width: 68px;
+              height: 49px;
+              margin: 3px 8px 3px 0px;
+            }
+            p{
+              font-size: 10px;
+              color: #8c8c8c;
+              margin: 14px 0px;
+            }
+          }
         }
       }
     }
