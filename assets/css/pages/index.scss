@@ -1,0 +1,58 @@
+@import "assets/css/mixin/wrap";
+@import "assets/css/mixin/grid";
+
+.index{
+  .carousel{
+    @include wrap(100%, auto, none){
+      margin-bottom: 163px;
+    }
+  }
+  .hot-tags{
+    @include wrap(1100px, 169px, red) {
+      height: auto;
+      width: 90%;
+      border-radius: 6px;
+      box-shadow:1px 3px 9px gray;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -140%);
+      background: #ffffff;
+      .tags-title{
+        max-width: 1000px;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 67px;
+        button{
+          font-size: 17px;
+          height: 67px;
+          background-color: #ffffff;
+          border: 1px solid #ffffff;
+          padding: 9px 10px;
+          cursor: pointer;
+          float: left;
+        }
+      }
+      .tags-body{
+        max-width: 1000px;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 100px;
+        p{
+          margin: 42px 16px 42px 0px;
+          float: left;
+          color: #8c8c8c;
+        }
+        button{
+          height: 37px;
+          margin: 31px 16px 31px 0px;
+          padding: 8px;
+          border:none;
+          border-radius: 5px;
+          color: #428da9;
+          font-size: 10px;
+          float: left;
+        }
+      }
+    }
+  }
+}

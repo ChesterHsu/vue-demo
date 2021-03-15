@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header></Header>
+    <core-header></core-header>
     <Nuxt class="view"/>
-    <Footer></Footer>
+    <core-footer></core-footer>
   </div>
 </template>
 <script>
@@ -10,8 +10,8 @@ import Header from "~/components/core/Header";
 import Footer from "~/components/core/Footer";
 export default {
   components: {
-    Header,
-    Footer
+    CoreHeader: Header,
+    CoreFooter: Footer
   }
 }
 </script>

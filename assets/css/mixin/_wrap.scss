@@ -1,0 +1,8 @@
+@mixin wrap($content-width, $content-height, $content-background) {
+  max-width: $content-width;
+  max-height: $content-height;
+  background: $content-background;
+  overflow: auto;
+  margin: 0px auto;
+  @content
+}

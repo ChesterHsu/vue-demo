@@ -1,27 +1,184 @@
 // 頭部高度
-$header-height: 100px;
+$header-height: 50px;
 // 頭部背景顏色
-$header-background: #35495e;
+$header-background: #ffffff;
 // 底部高度
-$footer-height: 200px;
+$footer-height: 180px;
 // 底部顏色
-$footer-background: red;
-
+$footer-background: #414243;
+// 內容寬度
+$content-width: 1170px;
 
 
 @import "layout/header";
 @import "layout/view";
 @import "layout/footer";
+@import "mixin/_wrap";
+@import "mixin/_grid";
 
-//
+//頭部
 .header{
-  @include header($header-height, $header-background);
+  @include header($header-height, $header-background){
+    .wrap{
+      @include wrap($content-width, $header-height, none) {
+        .logo {
+          width: 100px;
+          height: 15px;
+          margin: 18px 30px 12px 5px;
+          @include  note-book() {
+            margin-left: 10px;
+          }
+          @include phone() {
+            width: 90px;
+            height: 12px;
+            margin: 16px 15px 5px 15px;
+          }
+        }
+        .search {
+          max-width: 199px;
+          height: 24px;
+          margin: 14px 0px 12px 0px;
+          @include phone() {
+            margin: 0px;
+          }
+          form{
+            height: 24px;
+            border: none;
+            .search-button{
+              width: 24px;
+              height: 24px;
+              border: none;
+              background: url("./assets/images/search.png") no-repeat left center;
+              border: none;
+              @include phone() {
+                width: 18px;
+                height: 18px;
+                margin: 15px 0px 15px 0px;
+              }
+            }
+            .text {
+              max-width: 165px;
+              height: 24px;
+              border: none;
+              padding-left: 10px;
+              font-size: 16px;
+              color: #a3afbe;
+              @include phone() {
+                max-width: 120px;
+                height: 30px;
+                margin: 9px 0px 0px 0px;
+              }
+            }
+          }
+        }
+        .teach{
+          max-width: 64px;
+          height: 18px;
+          margin: 18px 16px 18px 0px;
+          @include pad() {
+            display: none;
+          }
+        }
+        .shopping-car-btn{
+          width: 16px;
+          height: 16px;
+          border: none;
+          margin: 18px 16px 18px 0px;
+          background: url("./assets/images/shoppingCar.png") no-repeat left center;
+          @include phone() {
+            margin: 16px 10px 10px 0px;
+          }
+        }
+        .question-circle-btn{
+          width: 16px;
+          height: 16px;
+          border: none;
+          margin: 18px 16px 18px 0px;
+          background: url("./assets/images/questionCircle.png") no-repeat left center;
+          @include pad() {
+            display: none;
+          }
+        }
+        .login-btn{
+          color: #4b8ca9;
+          background: white;
+          padding: 9px 17px;
+          font-size: 14px;
+          cursor: pointer;
+          border: 1px solid #4b8ca9;
+          border-radius: 5px;
+          margin: 10px 16px 10px 0px;
+          @include pad() {
+            display: none;
+          }
+        }
+        .registered{
+          color: white;
+          background: #4b8ca9;
+          padding: 9px 17px;
+          font-size: 14px;
+          cursor: pointer;
+          border: 1px solid #4b8ca9;
+          border-radius: 5px;
+          margin: 10px 16px 10px 0px;
+          @include pad() {
+            display: none;
+          }
+        }
+      }
+    }
+  };
 }
 
+// 主要區塊版型
 .view{
-  @include view($header-height);
+  @include view($header-height) {
+  };
 }
 
+// 底部導覽
 .footer{
-  @include footer($footer-height, $footer-background)
+  @include footer($footer-height, $footer-background) {
+    padding-top: 40px;
+    .fb-wrap {
+      margin: 0px auto 24px;
+      max-width: 171px;
+      height: auto;
+      .fb-link{
+        color: #4b8ca9;
+        background: white;
+        padding: 9px 17px;
+        font-size: 14px;
+        cursor: pointer;
+        border: 1px solid #4b8ca9;
+        border-radius: 5px;
+      }
+    }
+    .nav-link{
+      max-width: 580px;
+      height: 20px;
+      margin: 0px auto 18px;
+      ul{
+        width: 100%;
+        text-align: justify;
+        li{
+          display: inline-block;
+          list-style: none;
+          border: none;
+          a{
+            font-size: 14px;
+            text-decoration:none;
+            float: left;
+            color: #fbfbfb;
+          }
+        }
+      }
+      ul:after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        width: 100%;
+      }
+    }
+  }
 }
