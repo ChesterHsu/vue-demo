@@ -32,6 +32,31 @@
         <button>Python 3</button>
       </div>
     </div>
+    <div class="course">
+      <div class="title">
+        <h3>正在募資中的課程</h3>
+        <a href="#">更多募資課程</a>
+      </div>
+      <div class="contents" v-for="i in 8">
+        <div class="course-item">
+          <img class="m-0" src="@/assets/images/courseImage.png">
+          <div class="news">
+            <h3>區塊鏈開發實戰｜零基礎也能打造資產管理系統</h3>
+            <img src="@/assets/images/avatar.png">
+            <p>KC</p>
+            <div class="remaining-days">
+              <p>剩37天</p>
+              <p style="margin: 0px;float: right;">以募資 107%</p>
+            </div>
+            <div class="progress-bar"></div>
+            <div class="price">
+              <p class="discount">$ 1,990</p>
+              <s>$ 2,390</s>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="evaluation">
       <h3>口碑排行</h3>
       <div class="comment">
