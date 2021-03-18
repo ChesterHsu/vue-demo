@@ -79,10 +79,65 @@
           border:none;
           border-radius: 5px;
           color: #428da9;
+          background-color: #f5f5f5;
           font-size: 10px;
           float: left;
           @include phone() {
             margin: 15px 16px 15px 0px;
+          }
+        }
+      }
+    }
+  }
+  .introduction{
+    @include wrap(930px, auto, none){
+      margin-bottom: 5%;
+      @include mini-note-book() {
+        margin-left: 10%;
+      }
+      @include pad() {
+        margin-left: 14%;
+      }
+      img{
+        max-width: 60px;
+        height: auto;
+        float: left;
+        @include phone() {
+          max-width: 44px;
+        }
+      }
+      .content{
+        @include wrap(200px, auto, none){
+          width: 100%;
+          float: left;
+          padding-left: 1%;
+          padding-top: 5px;
+          margin-right: 4%;
+          overflow: hidden;
+          @include mini-note-book() {
+            max-width: 100px;
+            margin-right: 8%;
+          }
+          @include pad() {
+            max-width: 50px;
+          }
+          @include phone() {
+            margin-right: 10%;
+            max-width: 20px;
+          }
+          h3{
+            font-size: 18px;
+            margin-bottom: 10px;
+            @include phone() {
+              font-size: 14px;
+            }
+          }
+          p{
+            font-size: 14px;
+            color: #8c8c8c;
+            @include pad() {
+              display: none;
+            }
           }
         }
       }
@@ -94,11 +149,13 @@
         max-width: 1150px;
         margin-bottom: 40px;
         padding-left: 15px;
-
         h3{
           max-width: 195px;
           font-size: 24px;
           float: left;
+          @include phone() {
+            font-size: 18px;
+          }
         }
         a{
           font-size: 15px;
@@ -126,17 +183,30 @@
           }
           @include phone() {
             width: 98%;
+            height: 180px;
           }
           img{
+            @include phone() {
+              width: 30%;
+              float: left;
+            }
           }
           .news{
             max-width: 250px;
             height: 80px;
             margin: 0px 6px;
+            @include phone() {
+              float: right;
+              width: 65%;
+            }
             h3{
               @include line-feed-2() {
                 margin-bottom: 10px;
                 font-size: 20px;
+                @include phone() {
+                  font-size: 15px;
+                  margin-bottom: 5px;
+                }
               }
             }
             img{
@@ -145,18 +215,30 @@
               margin-right: 10px;
               margin-bottom: 10px;
               float: left;
+              @include phone() {
+                width: 20px;
+                height: 20px;
+                margin-bottom: 5px;
+              }
             }
             p{
               float: left;
               font-size: 14px;
               color: #8c8c8c;
               margin: 3% 60% 20px 0px;
+              @include phone() {
+                font-size: 6px;
+                margin-bottom: 14px;
+              }
             }
             .remaining-days p{
               font-size: 13px;
               margin: 3px 0px 0px 3px;
               color: #595959;
               float: left;
+              @include phone() {
+                font-size: 5px;
+              }
             }
             .progress-bar{
               max-width: 260px;
@@ -166,6 +248,9 @@
               float: left;
               border-radius: 30px;
               background: #d7645f;
+              @include phone() {
+                margin: 12px auto;
+              }
             }
             .price{
               float: left;
@@ -173,11 +258,18 @@
                 margin: 0px 4px;
                 font-size: 18px;
                 color: #454545;
+                @include phone() {
+                  margin-top: 4px;
+                  font-size: 7px;
+                }
               }
               s{
                 margin: 3px 6px;
                 font-size: 13px;
                 color: #c0c0c0;
+                @include phone() {
+                  font-size: 5px;
+                }
               }
             }
           }
