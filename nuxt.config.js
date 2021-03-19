@@ -22,7 +22,13 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/axios',
+    '~/plugins/api',
   ],
+  axios: {
+    baseURL: process.env.HiSKIO_BASE_API,
+    retry: { retries: 3 }
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -36,6 +42,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['@nuxtjs/axios'],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
