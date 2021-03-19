@@ -13,18 +13,17 @@
         </form>
       </div>
       <button class="registered float-right" type="button" >註冊</button>
-      <button class="login-btn float-right" type="button" >登入</button>
+      <button class="login-btn float-right" type="button" @click="loginDialog">登入</button>
       <a href="https://help.hiskio.com/zh-TW/" class="question-circle-btn float-right" type="button"></a>
-      <a href="#" class="shopping-car-btn float-right" type="button" @click="ShoppingCarSwitch"></a>
+      <a href="#" class="shopping-car-btn float-right" type="button" @click="shoppingCarSwitch"></a>
       <div class="teach float-right">
         <a href="https://hiskio.com/teach" type="button">我想開課</a>
       </div>
     </div>
   </header>
 </template>
+
 <script src="@/js/layout/Header.js">
-
 export default {
-
 }
 </script>
