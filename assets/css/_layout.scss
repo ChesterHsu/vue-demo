@@ -22,6 +22,7 @@ $content-width: 1170px;
   @include header($header-height, $header-background){
     .wrap{
       @include wrap($content-width, $header-height, none) {
+        overflow:hidden;
         .logo {
           width: 100px;
           height: 15px;
